@@ -16,39 +16,22 @@ export default function Navbar() {
         borderColor: 'rgba(255, 255, 255, 0.08)'
       }}
     >
-      <div className="container py-3">
+      <div className="container py-2">
         <div className="d-flex justify-content-between align-items-center">
           
-          {/* BRAND / LOGO */}
+          {/* BRAND / LOGO OFICIAL */}
           <Link 
             to="/" 
-            className="navbar-brand fw-bold d-flex align-items-center gap-2 m-0 text-decoration-none"
+            className="navbar-brand d-flex align-items-center m-0 text-decoration-none"
             onClick={closeMenu}
           >
-            <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <linearGradient id="reactorDarkGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stopColor="#00F2FE" />
-                  <stop offset="50%" stopColor="#3B82F6" />
-                  <stop offset="100%" stopColor="#A855F7" />
-                </linearGradient>
-              </defs>
-              <path 
-                d="M24 6L40 13V22C40 31.5 33 39.5 24 42C15 39.5 8 31.5 8 22V13L24 6Z"
-                stroke="url(#reactorDarkGrad)" 
-                strokeWidth="3" 
-                strokeLinejoin="round" 
-                fill="none" 
-              />
-              <g>
-                <path d="M16 21L13 24L16 27" stroke="#00F2FE" strokeWidth="2.5" strokeLinecap="round" />
-                <path d="M32 21L35 24L32 27" stroke="#00F2FE" strokeWidth="2.5" strokeLinecap="round" />
-                <path d="M24 16C24 19.5 20.5 24 17 24C20.5 24 28.5 24 31 24C27.5 24 24 19.5 24 16Z" fill="url(#reactorDarkGrad)" />
-              </g>
-            </svg>
-            <span className="fs-5 fw-bold tracking-tight">
-              <span className="text-white">TECHNOVO</span> <span style={{ color: '#60a5fa' }}>SAS</span>
-            </span>
+            <img 
+              src="/logo.png" 
+              alt="Technovo SAS" 
+              height="38" 
+              className="d-inline-block align-text-top"
+              style={{ objectFit: 'contain' }}
+            />
           </Link>
 
           {/* ENLACES ESCRITORIO */}
