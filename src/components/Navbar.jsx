@@ -27,7 +27,7 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             <img 
-              src={logoImg} 
+              src="/Logo.png"
               alt="Technovo SAS" 
               height="38" 
               className="d-inline-block align-text-top"
