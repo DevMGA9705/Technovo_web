@@ -1,0 +1,20 @@
+name: Deploy Technovo React Web to Debian
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy with Docker Compose
+        run: |
+          cd /home/technovo/apps/technovo-web
+          git pull origin main
+          docker compose up -d --build
