@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logoImg from '../assets/logo.png';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +26,7 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             <img 
-              src="/Logo.png"
+              src="/logo.png" 
               alt="Technovo SAS" 
               height="38" 
               className="d-inline-block align-text-top"
