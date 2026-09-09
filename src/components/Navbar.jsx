@@ -27,7 +27,7 @@ export default function Navbar() {
           >
             <img 
               src="/Logo.png" 
-              alt="TECHNOVO-MZL" 
+              alt="TECHNOVO MZL" 
               height="38" 
               className="d-inline-block align-text-top"
               style={{ objectFit: 'contain' }}

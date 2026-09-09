@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="border-top mt-4 pt-4 text-secondary small text-center" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-          &copy; {currentYear} TECHNOVO-MZL. Todos los derechos reservados.
+          &copy; {currentYear} TECHNOVO MZL. Todos los derechos reservados.
         </div>
       </div>
     </footer>
