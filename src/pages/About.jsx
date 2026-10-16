@@ -29,9 +29,9 @@ export default function About() {
       description: 'Construcción de arquitecturas backend con C# / ASP.NET Core, APIs RESTful e interfaces reactivas en React.'
     },
     {
-      initials: 'MA',
+      initials: 'FJ',
       roleCategory: 'Desarrollo Full Stack Java',
-      fullName: 'Mateo Alzate',
+      fullName: 'Desarrollo Full Stack Java',
       position: 'Full Stack Java Engineer',
       description: 'Desarrollo integral de microservicios y soluciones empresariales con Spring Boot, integración de APIs y frontend.'
     },
