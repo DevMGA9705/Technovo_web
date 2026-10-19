@@ -63,7 +63,7 @@ export default function About() {
       {/* ENCABEZADO PRINCIPAL */}
       <section className="text-center mx-auto mb-5" style={{ maxWidth: 820 }}>
         <span className="badge rounded-pill border border-secondary border-opacity-50 px-3 py-2 text-info bg-dark bg-opacity-75 mb-3">
-          <i className="bi bi-buildings-fill me-1"></i> Conoce a TECHNOVO MZL
+          <i className="bi bi-buildings-fill me-1"></i> Conoce a PLEXIA INGENIERIA
         </span>
         <h1 className="display-5 fw-bold text-white mb-3 lh-sm">
           Impulsando el futuro digital con ingeniería de software a medida

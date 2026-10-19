@@ -26,8 +26,8 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             <img 
-              src="/LogoPlexia.jpeg" 
-              alt="TECHNOVO MZL" 
+              src="/LogoPlexia2.jpeg" 
+              alt="PLEXIA INGENIERIA" 
               height="38" 
               className="d-inline-block align-text-top"
               style={{ objectFit: 'contain' }}

@@ -103,7 +103,7 @@ export default function Contacts() {
             </div>
 
             <div className="pt-4 border-top border-secondary border-opacity-25">
-              <h6 className="fw-bold mb-1 text-white">TECHNOVO MZL</h6>
+              <h6 className="fw-bold mb-1 text-white">PLEXIA INGENIERIA</h6>
               <p className="text-secondary small mb-0">Ingeniería que escala tu negocio.</p>
             </div>
           </div>

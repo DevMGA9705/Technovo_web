@@ -16,7 +16,7 @@ export default function Footer() {
           
           <div className="col-lg-4 col-md-6">
             <h5 className="fw-bold text-white mb-3">
-              TECHNOVO <span style={{ color: '#60a5fa' }}>MZL</span>
+              PLEXIA <span style={{ color: '#60a5fa' }}>INGENIERIA</span>
             </h5>
             <p className="text-secondary small pe-lg-4">
               Ingeniería de software, arquitecturas cloud nativas y consultoría de alto rendimiento tecnológico.
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
 
         <div className="border-top mt-4 pt-4 text-secondary small text-center" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-          &copy; {currentYear} TECHNOVO MZL. Todos los derechos reservados.
+          &copy; {currentYear} PLEXIA INGENIERIA. Todos los derechos reservados.
         </div>
       </div>
     </footer>
