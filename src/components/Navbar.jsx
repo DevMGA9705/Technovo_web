@@ -27,7 +27,7 @@ export default function Navbar() {
             {/* Contenedor que recorta los bordes vacíos de la imagen */}
             <div
               style={{
-                height: '60px',
+                height: '70px',
                 width: '240px',
                 overflow: 'hidden',
                 display: 'flex',
