@@ -3,6 +3,13 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const gradientTextStyle = {
+    background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    display: 'inline-block'
+  };
+
   return (
     <footer 
       className="text-white pt-5 pb-4 mt-auto border-top"
@@ -16,26 +23,40 @@ export default function Footer() {
           
           <div className="col-lg-4 col-md-6">
             <h5 className="fw-bold text-white mb-3">
-              PLEXIA <span style={{ color: '#60a5fa' }}>INGENIERIA</span>
+              PLEXIA <span style={gradientTextStyle}>INGENIERÍA</span>
             </h5>
             <p className="text-secondary small pe-lg-4">
               Ingeniería de software, arquitecturas cloud nativas y consultoría de alto rendimiento tecnológico.
             </p>
             <div className="d-flex gap-2 mt-3">
-              <a href="#" className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" style={{ width: 36, height: 36 }}>
+              <a 
+                href="#" 
+                className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" 
+                style={{ width: 36, height: 36 }}
+              >
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="#" className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" style={{ width: 36, height: 36 }}>
+              <a 
+                href="#" 
+                className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" 
+                style={{ width: 36, height: 36 }}
+              >
                 <i className="bi bi-github"></i>
               </a>
-              <a href="#" className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" style={{ width: 36, height: 36 }}>
+              <a 
+                href="#" 
+                className="btn btn-outline-secondary btn-sm rounded-circle p-2 text-white border-secondary border-opacity-50 d-flex align-items-center justify-content-center" 
+                style={{ width: 36, height: 36 }}
+              >
                 <i className="bi bi-whatsapp"></i>
               </a>
             </div>
           </div>
 
           <div className="col-lg-2 col-md-6">
-            <h6 className="text-uppercase fw-bold text-info small mb-3">Navegación</h6>
+            <h6 className="text-uppercase fw-bold small mb-3" style={gradientTextStyle}>
+              Navegación
+            </h6>
             <ul className="list-unstyled text-secondary small">
               <li className="mb-2"><Link to="/" className="text-secondary text-decoration-none">Inicio</Link></li>
               <li className="mb-2"><Link to="/services" className="text-secondary text-decoration-none">Servicios</Link></li>
@@ -45,7 +66,9 @@ export default function Footer() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <h6 className="text-uppercase fw-bold text-info small mb-3">Soluciones</h6>
+            <h6 className="text-uppercase fw-bold small mb-3" style={gradientTextStyle}>
+              Soluciones
+            </h6>
             <ul className="list-unstyled text-secondary small">
               <li className="mb-2">Desarrollo Web & APIs</li>
               <li className="mb-2">Infraestructura & Docker</li>
@@ -55,19 +78,21 @@ export default function Footer() {
           </div>
 
           <div className="col-lg-3 col-md-6">
-            <h6 className="text-uppercase fw-bold text-info small mb-3">Contacto</h6>
+            <h6 className="text-uppercase fw-bold small mb-3" style={gradientTextStyle}>
+              Contacto
+            </h6>
             <p className="text-secondary small mb-1">
-              <i className="bi bi-geo-alt text-info me-1"></i> Manizales, Colombia
+              <i className="bi bi-geo-alt me-1" style={{ color: '#7c3aed' }}></i> Manizales, Colombia
             </p>
             <p className="text-secondary small">
-              <i className="bi bi-envelope text-info me-1"></i> technovoinfo@technovo-manizales.online
+              <i className="bi bi-envelope me-1" style={{ color: '#7c3aed' }}></i> technovoinfo@technovo-manizales.online
             </p>
           </div>
 
         </div>
 
         <div className="border-top mt-4 pt-4 text-secondary small text-center" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
-          &copy; {currentYear} PLEXIA INGENIERIA. Todos los derechos reservados.
+          &copy; {currentYear} PLEXIA INGENIERÍA. Todos los derechos reservados.
         </div>
       </div>
     </footer>
