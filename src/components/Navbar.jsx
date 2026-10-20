@@ -26,7 +26,7 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             <img 
-              src="/logoplexia.png" 
+              src="/logoplexia2.png" 
               alt="PLEXIA INGENIERIA" 
               height="54" 
               className="d-inline-block align-text-top"
