@@ -19,23 +19,34 @@ export default function Navbar() {
       <div className="container py-2">
         <div className="d-flex justify-content-between align-items-center">
 
-          {/* BRAND / LOGO OFICIAL */}
           <Link
             to="/"
             className="navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none"
             onClick={closeMenu}
           >
-            <img
-              src="/logoplexia2.png"
-              alt="PLEXIA INGENIERÍA"
-              className="d-block"
+            {/* Contenedor que recorta los bordes vacíos de la imagen */}
+            <div
               style={{
-                height: '56px',          // Altura real visible
-                width: 'auto',           // Expansión proporcional horizontal
-                maxHeight: 'none',       // Rompe cualquier límite global de Bootstrap
-                objectFit: 'contain'
+                height: '50px',
+                width: '180px',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
               }}
-            />
+            >
+              <img
+                src="/logoplexia2.png"
+                alt="PLEXIA INGENIERÍA"
+                style={{
+                  height: '110px',           // Altura aumentada para agrandar el contenido real
+                  width: 'auto',
+                  objectFit: 'contain',
+                  transform: 'scale(1.4)',   // Zoom directo al centro de la imagen
+                  transformOrigin: 'center'
+                }}
+              />
+            </div>
           </Link>
 
           {/* ENLACES ESCRITORIO */}
