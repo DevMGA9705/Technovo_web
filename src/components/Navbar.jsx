@@ -28,7 +28,7 @@ export default function Navbar() {
             <img 
               src="/logoplexia2.png" 
               alt="PLEXIA INGENIERIA" 
-              height="54" 
+              height="70" 
               className="d-inline-block align-text-top"
               style={{ objectFit: 'contain' }}
             />
