@@ -1,11 +1,12 @@
 :root {
-  --accent: #00e5ff;
-  --accent-bg: rgba(0, 229, 255, 0.08);
-  --accent-border: #00e5ff;
-  --border: rgba(0, 229, 255, 0.2);
+  /* Paleta unificada con el gradiente de los botones (#2563eb a #7c3aed) */
+  --accent: #60a5fa;
+  --accent-bg: rgba(37, 99, 235, 0.12);
+  --accent-border: #7c3aed;
+  --border: rgba(124, 58, 237, 0.25);
   --text-h: #ffffff;
-  --social-bg: rgba(157, 78, 221, 0.15);
-  --shadow: 0 4px 20px rgba(0, 229, 255, 0.25);
+  --social-bg: rgba(124, 58, 237, 0.15);
+  --shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
 }
 
 .counter {
@@ -84,7 +85,7 @@
   border-top: 1px solid var(--border);
   text-align: left;
 
-  &>div {
+  & > div {
     flex: 1 1 0;
     padding: 32px;
 
@@ -194,33 +195,48 @@
     right: 0;
     border-right-color: var(--border);
   }
+}
 
-  button,
-  .btn,
-  .btn-primary,
-  a.btn,
-  a[class*="btn"] {
-    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
-    color: #ffffff !important;
-    border: none !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-  }
+/* ========================================================
+   REGLAS GLOBALES FUERA DE .TICKS
+   ======================================================== */
 
-  /* Efecto hover suave para mantener interactividad */
-  button:hover,
-  .btn:hover,
-  .btn-primary:hover,
-  a.btn:hover,
-  a[class*="btn"]:hover {
-    opacity: 0.92;
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4) !important;
-    transform: translateY(-1px);
-  }
+/* 1. Botones globales con el gradiente oficial */
+button,
+.btn,
+.btn-primary,
+a.btn,
+a[class*="btn"] {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
 
-  /* Efecto al hacer clic */
-  button:active,
-  .btn:active,
-  .btn-primary:active {
-    transform: translateY(0);
-  }
+button:hover,
+.btn:hover,
+.btn-primary:hover,
+a.btn:hover,
+a[class*="btn"]:hover {
+  opacity: 0.92;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+button:active,
+.btn:active,
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* 2. Reemplazo del color cian en títulos (NAVEGACIÓN, SOLUCIONES, CONTACTO, etc.) */
+.text-info,
+footer h5,
+footer h6 {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  display: inline-block;
+  font-weight: 700;
 }
