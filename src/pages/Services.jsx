@@ -6,12 +6,12 @@ export default function Services() {
       icon: 'bi-window-stack',
       color: '#38bdf8',
       title: 'Desarrollo Web Full Stack (.NET & Java)',
-      description: 'Construcción de arquitecturas modulares, microservicios empresariales y plataformas web de alto rendimiento diseñadas para soportar alta demanda transaccional.',
+      description: 'Construcción de arquitecturas modulares, microservicios empresariales y plataformas web de alto rendimiento, diseñadas para soportar alta demanda transaccional.',
       capabilities: [
-        'Ecosistema .NET 8/9, C# y ASP.NET Core',
-        'Microservicios con Java & Spring Boot',
-        'SPAs reactivas e intuitivas con React',
-        'APIs RESTful seguras y escalables'
+        'Ecosistema .NET 8/9, C# y ASP.NET Core.',
+        'Microservicios con Java & Spring Boot.',
+        'SPAs reactivas e intuitivas con React.',
+        'APIs RESTful seguras y escalables.'
       ]
     },
     {
@@ -20,10 +20,10 @@ export default function Services() {
       title: 'Desarrollo de Aplicaciones Móviles',
       description: 'Creación de experiencias móviles nativas y multiplataforma fluidas para iOS y Android con integración en tiempo real y consumo optimizado de APIs.',
       capabilities: [
-        'Desarrollo nativo (Swift para iOS / Kotlin para Android)',
-        'Soluciones multiplataforma híbridas (React Native / Flutter)',
-        'Sincronización en segundo plano y modo offline',
-        'Publicación y optimización en App Store y Google Play'
+        'Desarrollo nativo (Swift para iOS / Kotlin para Android).',
+        'Soluciones multiplataforma híbridas (React Native / Flutter).',
+        'Sincronización en segundo plano y modo offline.',
+        'Publicación y optimización en App Store y Google Play.'
       ]
     },
     {
@@ -32,10 +32,10 @@ export default function Services() {
       title: 'Administración de Servidores & Cloud',
       description: 'Configuración, virtualización y despliegue de entornos de producción de alta disponibilidad en servidores locales y en la nube.',
       capabilities: [
-        'Despliegues automatizados con Docker & Docker Compose',
-        'Administración y tuning de Linux (Ubuntu) & Windows Server',
-        'Modelado y optimización de SQL Server & PostgreSQL',
-        'Balanceo de carga y alta disponibilidad (99.9% Uptime)'
+        'Despliegues automatizados con Docker & Docker Compose.',
+        'Administración y tuning de Linux (Ubuntu) & Windows Server.',
+        'Modelado y optimización de SQL Server & PostgreSQL.',
+        'Balanceo de carga y alta disponibilidad (99.9% Uptime).'
       ]
     },
     {
@@ -44,10 +44,10 @@ export default function Services() {
       title: 'Seguridad IT & Blindaje Perimetral',
       description: 'Auditoría de vulnerabilidades, configuración de firewalls, políticas de copias de seguridad redundantes y endurecimiento de sistemas frente a incidentes.',
       capabilities: [
-        'Hardening de servidores, puertos y credenciales',
-        'Estrategias de Disaster Recovery & backups automáticos',
-        'Gestión de certificados SSL/TLS y cifrado de datos',
-        'Auditorías preventivas de código y puertos abiertos'
+        'Hardening de servidores, puertos y credenciales.',
+        'Estrategias de Disaster Recovery & backups automáticos.',
+        'Gestión de certificados SSL/TLS y cifrado de datos.',
+        'Auditorías preventivas de código y puertos abiertos.'
       ]
     },
     {
@@ -56,10 +56,10 @@ export default function Services() {
       title: 'Infraestructura, Hardware & Redes',
       description: 'Diagnóstico técnico, mantenimiento preventivo de hardware crítico, montaje de servidores y configuración de redes locales y de acceso remoto.',
       capabilities: [
-        'Diagnóstico físico, mantenimiento térmico y ensambles de servidores',
-        'Configuración de redes corporativas (LAN, VLAN, Netplan)',
-        'Monitoreo de componentes y continuidad operativa',
-        'Optimización de infraestructura física de cómputo'
+        'Diagnóstico físico, mantenimiento térmico y ensambles de servidores.',
+        'Configuración de redes corporativas (LAN, VLAN, Netplan).',
+        'Monitoreo de componentes y continuidad operativa.',
+        'Optimización de infraestructura física de cómputo.'
       ]
     },
     {
@@ -68,10 +68,10 @@ export default function Services() {
       title: 'Asesoría y Consultoría Tecnológica',
       description: 'Acompañamiento estratégico para la toma de decisiones clave: modernización de software legado, compra de hardware y dimensionamiento de servidores.',
       capabilities: [
-        'Auditoría y diagnóstico de infraestructura existente',
-        'Dimensionamiento técnico y reducción de costos operativos',
-        'Roadmap para migración digital de procesos',
-        'Consultoría continua y soporte técnico empresarial'
+        'Auditoría y diagnóstico de infraestructura existente.',
+        'Dimensionamiento técnico y reducción de costos operativos.',
+        'Roadmap para migración digital de procesos.',
+        'Consultoría continua y soporte técnico empresarial.'
       ]
     }
   ];

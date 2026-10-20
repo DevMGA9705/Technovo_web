@@ -69,7 +69,7 @@ export default function About() {
           Impulsando el futuro digital con ingeniería de software a medida
         </h1>
         <p className="lead text-secondary">
-          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube y consultoría en hardware y seguridad IT.
+          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube,consultoría en hardware y seguridad IT.
         </p>
       </section>
 
@@ -88,7 +88,7 @@ export default function About() {
             </div>
             <h3 className="fw-bold text-white mb-3">Nuestra Misión</h3>
             <p className="text-secondary leading-relaxed mb-0">
-              Proveer soluciones tecnológicas robustas, escalables y seguras que optimicen los procesos operativos de nuestras organizaciones aliadas, garantizando innovación constante y un alto estándar de calidad en cada línea de código e infraestructura física.
+             Impulsar y fortalecer la evolución operativa de las organizaciones aliadas mediante soluciones tecnológicas integrales, escalables y seguras. Diseñamos arquitectura de software e infraestructura crítica bajo estándares rigurosos de ingeniería, combinando innovación continua y resiliencia técnica para transformar procesos de negocio.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function About() {
             </div>
             <h3 className="fw-bold text-white mb-3">Nuestra Visión</h3>
             <p className="text-secondary leading-relaxed mb-0">
-              Consolidarnos como un referente en consultoría de software multiplataforma, aplicaciones móviles, ciberseguridad e infraestructura tecnológica integral, destacados por la excelencia técnica y el acompañamiento directo.
+              Ser el aliado estratégico referente en transformación y modernización tecnológica, reconocidos por liderar proyectos de software integral, ciberseguridad e infraestructura avanzada mediante una cultura de excelencia técnica y cercanía operativa.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function About() {
               </div>
               <h5 className="fw-bold text-white mb-2">Calidad & Seguridad IT</h5>
               <p className="text-secondary small mb-0">
-                Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
+                 Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
               </p>
             </div>
           </div>
