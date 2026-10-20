@@ -69,7 +69,7 @@ export default function About() {
           Impulsando el futuro digital con ingeniería de software a medida
         </h1>
         <p className="lead text-secondary">
-          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube y consultoría en hardware y seguridad IT.
+          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube,consultoría en hardware y seguridad IT.
         </p>
       </section>
 
@@ -135,7 +135,7 @@ export default function About() {
               </div>
               <h5 className="fw-bold text-white mb-2">Calidad & Seguridad IT</h5>
               <p className="text-secondary small mb-0">
-                Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
+                 Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
               </p>
             </div>
           </div>
