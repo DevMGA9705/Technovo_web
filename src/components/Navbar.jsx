@@ -27,8 +27,8 @@ export default function Navbar() {
             {/* Contenedor que recorta los bordes vacíos de la imagen */}
             <div
               style={{
-                height: '50px',
-                width: '180px',
+                height: '60px',
+                width: '240px',
                 overflow: 'hidden',
                 display: 'flex',
                 alignItems: 'center',
@@ -39,11 +39,12 @@ export default function Navbar() {
                 src="/logoplexia2.png"
                 alt="PLEXIA INGENIERÍA"
                 style={{
-                  height: '110px',           // Altura aumentada para agrandar el contenido real
+                  height: '90px',            // Reducimos un poco de 110px a 90px para un ajuste perfecto sin desbordarse
                   width: 'auto',
                   objectFit: 'contain',
-                  transform: 'scale(1.4)',   // Zoom directo al centro de la imagen
-                  transformOrigin: 'center'
+                  transform: 'scale(1.35)',   // Un zoom de 1.35x para mantenerlo grande pero seguro dentro de la caja
+                  transformOrigin: 'left center', /* Escala desde la izquierda para proteger el isotipo */
+                  marginLeft: '-15px'
                 }}
               />
             </div>
