@@ -8,7 +8,7 @@ export default function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header 
+    <header
       className="sticky-top border-bottom"
       style={{
         backgroundColor: 'rgba(9, 13, 22, 0.85)',
@@ -18,50 +18,54 @@ export default function Navbar() {
     >
       <div className="container py-2">
         <div className="d-flex justify-content-between align-items-center">
-          
+
           {/* BRAND / LOGO OFICIAL */}
-          <Link 
-            to="/" 
-            className="navbar-brand d-flex align-items-center m-0 text-decoration-none"
+          <Link
+            to="/"
+            className="navbar-brand d-flex align-items-center m-0 p-0 text-decoration-none"
             onClick={closeMenu}
           >
-            <img 
-              src="/logoplexia2.png" 
-              alt="PLEXIA INGENIERIA" 
-              height="70" 
-              className="d-inline-block align-text-top"
-              style={{ objectFit: 'contain' }}
+            <img
+              src="/logoplexia2.png"
+              alt="PLEXIA INGENIERÍA"
+              className="d-block"
+              style={{
+                height: '56px',          // Altura real visible
+                width: 'auto',           // Expansión proporcional horizontal
+                maxHeight: 'none',       // Rompe cualquier límite global de Bootstrap
+                objectFit: 'contain'
+              }}
             />
           </Link>
 
           {/* ENLACES ESCRITORIO */}
           <nav className="d-none d-md-flex align-items-center gap-4">
-            <NavLink 
-              to="/" 
-              className={({ isActive }) => 
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
                 `small fw-semibold text-decoration-none transition-all ${isActive ? 'text-white' : 'text-secondary hover-text-white'}`
               }
             >
               Inicio
             </NavLink>
-            <NavLink 
-              to="/services" 
-              className={({ isActive }) => 
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
                 `small fw-semibold text-decoration-none transition-all ${isActive ? 'text-white' : 'text-secondary hover-text-white'}`
               }
             >
               Servicios
             </NavLink>
-            <NavLink 
-              to="/about" 
-              className={({ isActive }) => 
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
                 `small fw-semibold text-decoration-none transition-all ${isActive ? 'text-white' : 'text-secondary hover-text-white'}`
               }
             >
               Nosotros
             </NavLink>
-            <Link 
-              to="/contacts" 
+            <Link
+              to="/contacts"
               className="btn btn-sm rounded-pill px-4 py-2 fw-semibold text-white border-0 shadow-sm ms-2"
               style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)' }}
             >
@@ -70,7 +74,7 @@ export default function Navbar() {
           </nav>
 
           {/* BOTÓN MÓVIL HAMBURGUESA */}
-          <button 
+          <button
             type="button"
             className="btn btn-outline-secondary d-md-none border-secondary border-opacity-50 rounded-3 p-2 text-white"
             onClick={toggleMenu}
@@ -83,34 +87,34 @@ export default function Navbar() {
 
         {/* MENÚ MÓVIL */}
         {isMenuOpen && (
-          <div 
+          <div
             className="d-md-none border rounded-4 mt-3 p-3"
             style={{ backgroundColor: '#0f172a', borderColor: 'rgba(255,255,255,0.1)' }}
           >
             <div className="d-flex flex-column gap-2">
-              <NavLink 
-                to="/" 
+              <NavLink
+                to="/"
                 className="nav-link text-white fw-semibold py-2 px-3 rounded-3"
                 onClick={closeMenu}
               >
                 Inicio
               </NavLink>
-              <NavLink 
-                to="/services" 
+              <NavLink
+                to="/services"
                 className="nav-link text-white fw-semibold py-2 px-3 rounded-3"
                 onClick={closeMenu}
               >
                 Servicios
               </NavLink>
-              <NavLink 
-                to="/about" 
+              <NavLink
+                to="/about"
                 className="nav-link text-white fw-semibold py-2 px-3 rounded-3"
                 onClick={closeMenu}
               >
                 Nosotros
               </NavLink>
-              <Link 
-                to="/contacts" 
+              <Link
+                to="/contacts"
                 className="btn btn-primary rounded-pill py-2 mt-2 w-100 fw-semibold"
                 onClick={closeMenu}
               >
