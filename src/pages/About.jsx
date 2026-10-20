@@ -69,7 +69,7 @@ export default function About() {
           Impulsando el futuro digital con ingeniería de software a medida
         </h1>
         <p className="lead text-secondary">
-          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube,consultoría en hardware y seguridad IT.
+          Somos una empresa especializada en desarrollo de software web y móvil, arquitectura de sistemas, infraestructura en la nube, consultoría en hardware y seguridad IT.
         </p>
       </section>
 
@@ -88,7 +88,7 @@ export default function About() {
             </div>
             <h3 className="fw-bold text-white mb-3">Nuestra Misión</h3>
             <p className="text-secondary leading-relaxed mb-0">
-             Impulsar y fortalecer la evolución operativa de las organizaciones aliadas mediante soluciones tecnológicas integrales, escalables y seguras. Diseñamos arquitectura de software e infraestructura crítica bajo estándares rigurosos de ingeniería, combinando innovación continua y resiliencia técnica para transformar procesos de negocio.
+              Impulsar y fortalecer la evolución operativa de las organizaciones aliadas mediante soluciones tecnológicas integrales, escalables y seguras. Diseñamos arquitectura de software e infraestructura crítica bajo estándares rigurosos de ingeniería, combinando innovación continua y resiliencia técnica para transformar procesos de negocio.
             </p>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function About() {
               </div>
               <h5 className="fw-bold text-white mb-2">Calidad & Seguridad IT</h5>
               <p className="text-secondary small mb-0">
-                 Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
+                Arquitectura limpia, código modular multiplataforma, entornos blindados contra amenazas y respaldo continuo.
               </p>
             </div>
           </div>
@@ -192,12 +192,12 @@ export default function About() {
           {teamMembers.map((member, index) => (
             <div key={index} className="col-md-6 col-lg-4">
               <div 
-                className="p-4 rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column justify-content-between"
+                className="p-4 rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column"
                 style={{ background: 'rgba(15, 23, 42, 0.75)', backdropFilter: 'blur(10px)' }}
               >
-                {/* Bloque Visual Iniciales */}
+                {/* Bloque Visual Iniciales (Altura fija y sin encogerse) */}
                 <div 
-                  className="rounded-4 mb-4 d-flex align-items-center justify-content-center position-relative overflow-hidden"
+                  className="rounded-4 mb-4 d-flex align-items-center justify-content-center position-relative overflow-hidden flex-shrink-0"
                   style={{
                     height: '210px',
                     background: 'radial-gradient(circle at 50% 35%, rgba(59, 130, 246, 0.28) 0%, rgba(124, 58, 237, 0.15) 50%, rgba(10, 15, 26, 0.95) 85%)',
@@ -212,27 +212,45 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Categoría, Nombre y Cargo */}
-                <div>
-                  <small 
-                    className="text-uppercase fw-bold d-block mb-1"
-                    style={{ color: '#60a5fa', fontSize: '0.75rem', letterSpacing: '0.06em' }}
-                  >
-                    {member.roleCategory}
-                  </small>
-                  <h4 
-                    className="fw-bold text-white text-uppercase mb-1"
-                    style={{ letterSpacing: '-0.02em', fontSize: '1.25rem' }}
-                  >
-                    {member.fullName}
-                  </h4>
-                  <p className="fw-semibold small text-info text-opacity-75 mb-2">
-                    {member.position}
-                  </p>
-                  <p className="text-secondary small mb-0">
-                    {member.description}
-                  </p>
-                </div>
+                {/* Categoría: Altura mínima reservada para hasta 2 líneas */}
+                <small 
+                  className="text-uppercase fw-bold d-flex align-items-end mb-1"
+                  style={{ 
+                    color: '#60a5fa', 
+                    fontSize: '0.75rem', 
+                    letterSpacing: '0.06em',
+                    minHeight: '2.5rem',
+                    lineHeight: '1.25'
+                  }}
+                >
+                  {member.roleCategory}
+                </small>
+
+                {/* Nombre completo: Altura mínima uniforme */}
+                <h4 
+                  className="fw-bold text-white text-uppercase d-flex align-items-center mb-1"
+                  style={{ 
+                    letterSpacing: '-0.02em', 
+                    fontSize: '1.2rem',
+                    minHeight: '3.2rem',
+                    lineHeight: '1.2'
+                  }}
+                >
+                  {member.fullName}
+                </h4>
+
+                {/* Cargo/Puesto: Espacio reservado para 2 líneas */}
+                <p 
+                  className="fw-semibold small text-info text-opacity-75 mb-2 d-flex align-items-start"
+                  style={{ minHeight: '2.5rem', lineHeight: '1.25' }}
+                >
+                  {member.position}
+                </p>
+
+                {/* Descripción: Se expande ocupando el resto de la tarjeta */}
+                <p className="text-secondary small mb-0 flex-grow-1">
+                  {member.description}
+                </p>
               </div>
             </div>
           ))}
