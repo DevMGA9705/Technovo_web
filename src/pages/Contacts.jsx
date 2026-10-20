@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 export default function Contacts() {
+  const brandGradient = 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -51,10 +53,26 @@ export default function Contacts() {
     }
   };
 
+  const iconBoxStyle = {
+    width: 50,
+    height: 50,
+    background: 'rgba(37, 99, 235, 0.12)',
+    border: '1px solid rgba(124, 58, 237, 0.25)',
+    color: '#38bdf8',
+    boxShadow: '0 0 14px rgba(37, 99, 235, 0.15)'
+  };
+
   return (
     <div className="container py-5">
       <div className="text-center mx-auto mb-5" style={{ maxWidth: 680 }}>
-        <span className="badge rounded-pill border border-secondary border-opacity-50 px-3 py-2 text-info bg-dark bg-opacity-75 mb-3">
+        <span 
+          className="badge rounded-pill px-3 py-2 mb-3 shadow-sm d-inline-flex align-items-center gap-1"
+          style={{
+            background: 'rgba(37, 99, 235, 0.1)',
+            border: '1px solid rgba(124, 58, 237, 0.35)',
+            color: '#38bdf8'
+          }}
+        >
           <i className="bi bi-chat-dots-fill me-1"></i> Contacto Directo
         </span>
         <h1 className="display-5 fw-bold text-white lh-sm mb-3">Hablemos de tu proyecto</h1>
@@ -66,12 +84,18 @@ export default function Contacts() {
       <div className="row g-4 g-lg-5">
         {/* INFO DIRECTA */}
         <div className="col-lg-5">
-          <div className="p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
+          <div 
+            className="p-4 p-md-5 rounded-4 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between" 
+            style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
+          >
             <div>
               <h4 className="fw-bold mb-4 text-white">Canales Oficiales</h4>
 
               <div className="d-flex align-items-start mb-4">
-                <div className="bg-primary bg-opacity-10 text-info rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center" style={{ width: 50, height: 50 }}>
+                <div 
+                  className="rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center flex-shrink-0" 
+                  style={iconBoxStyle}
+                >
                   <i className="bi bi-geo-alt-fill"></i>
                 </div>
                 <div>
@@ -81,7 +105,10 @@ export default function Contacts() {
               </div>
 
               <div className="d-flex align-items-start mb-4">
-                <div className="bg-primary bg-opacity-10 text-info rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center" style={{ width: 50, height: 50 }}>
+                <div 
+                  className="rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center flex-shrink-0" 
+                  style={iconBoxStyle}
+                >
                   <i className="bi bi-envelope-fill"></i>
                 </div>
                 <div>
@@ -91,7 +118,10 @@ export default function Contacts() {
               </div>
 
               <div className="d-flex align-items-start mb-4">
-                <div className="bg-primary bg-opacity-10 text-info rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center" style={{ width: 50, height: 50 }}>
+                <div 
+                  className="rounded-3 p-3 me-3 fs-4 d-flex align-items-center justify-content-center flex-shrink-0" 
+                  style={iconBoxStyle}
+                >
                   <i className="bi bi-clock-fill"></i>
                 </div>
                 <div>
@@ -103,7 +133,7 @@ export default function Contacts() {
             </div>
 
             <div className="pt-4 border-top border-secondary border-opacity-25">
-              <h6 className="fw-bold mb-1 text-white">PLEXIA INGENIERIA</h6>
+              <h6 className="fw-bold mb-1 text-white">PLEXIA INGENIERÍA</h6>
               <p className="text-secondary small mb-0">Ingeniería que escala tu negocio.</p>
             </div>
           </div>
@@ -111,7 +141,10 @@ export default function Contacts() {
 
         {/* FORMULARIO */}
         <div className="col-lg-7">
-          <div className="p-4 p-md-5 rounded-4 border border-secondary border-opacity-25" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
+          <div 
+            className="p-4 p-md-5 rounded-4 border border-secondary border-opacity-25" 
+            style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
+          >
             <h4 className="fw-bold mb-2 text-white">Envíanos un mensaje</h4>
             <p className="text-secondary small mb-4">Recibirás respuesta en menos de 24 horas hábiles.</p>
 
@@ -190,8 +223,14 @@ export default function Contacts() {
                 <div className="col-12 mt-4">
                   <button 
                     type="submit" 
-                    className="btn btn-primary btn-lg w-100 fw-bold rounded-3 shadow-lg"
-                    style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)', border: 'none' }}
+                    className="btn btn-lg w-100 fw-bold rounded-3 shadow-lg"
+                    style={{ 
+                      background: brandGradient, 
+                      color: '#ffffff',
+                      border: 'none',
+                      boxShadow: '0 4px 18px rgba(124, 58, 237, 0.35)',
+                      transition: 'all 0.25s ease'
+                    }}
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}

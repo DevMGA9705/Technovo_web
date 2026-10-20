@@ -58,12 +58,37 @@ export default function About() {
     }
   ];
 
+  const iconPillarStyle = {
+    width: 52,
+    height: 52,
+    background: 'rgba(0, 229, 255, 0.12)',
+    border: '1px solid rgba(0, 229, 255, 0.25)',
+    color: '#00e5ff',
+    boxShadow: '0 0 16px rgba(0, 229, 255, 0.15)'
+  };
+
+  const iconValueStyle = {
+    width: 60,
+    height: 60,
+    background: 'rgba(37, 99, 235, 0.12)',
+    border: '1px solid rgba(124, 58, 237, 0.25)',
+    color: '#38bdf8',
+    boxShadow: '0 0 16px rgba(37, 99, 235, 0.15)'
+  };
+
   return (
     <div className="container py-5">
       {/* ENCABEZADO PRINCIPAL */}
       <section className="text-center mx-auto mb-5" style={{ maxWidth: 820 }}>
-        <span className="badge rounded-pill border border-secondary border-opacity-50 px-3 py-2 text-info bg-dark bg-opacity-75 mb-3">
-          <i className="bi bi-buildings-fill me-1"></i> Conoce a PLEXIA INGENIERIA
+        <span 
+          className="badge rounded-pill px-3 py-2 mb-3 shadow-sm d-inline-flex align-items-center gap-1"
+          style={{
+            background: 'rgba(0, 229, 255, 0.08)',
+            border: '1px solid rgba(0, 229, 255, 0.3)',
+            color: '#00e5ff'
+          }}
+        >
+          <i className="bi bi-buildings-fill me-1"></i> Conoce a PLEXIA INGENIERÍA
         </span>
         <h1 className="display-5 fw-bold text-white mb-3 lh-sm">
           Impulsando el futuro digital con ingeniería de software a medida
@@ -81,8 +106,8 @@ export default function About() {
             style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
           >
             <div 
-              className="bg-primary bg-opacity-10 text-info rounded-3 d-inline-flex align-items-center justify-content-center mb-4" 
-              style={{ width: 52, height: 52 }}
+              className="rounded-3 d-inline-flex align-items-center justify-content-center mb-4" 
+              style={iconPillarStyle}
             >
               <i className="bi bi-bullseye fs-3"></i>
             </div>
@@ -99,8 +124,8 @@ export default function About() {
             style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
           >
             <div 
-              className="bg-primary bg-opacity-10 text-info rounded-3 d-inline-flex align-items-center justify-content-center mb-4" 
-              style={{ width: 52, height: 52 }}
+              className="rounded-3 d-inline-flex align-items-center justify-content-center mb-4" 
+              style={iconPillarStyle}
             >
               <i className="bi bi-eye-fill fs-3"></i>
             </div>
@@ -128,8 +153,8 @@ export default function About() {
               style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
             >
               <div 
-                className="bg-primary bg-opacity-10 text-info rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
-                style={{ width: 60, height: 60 }}
+                className="rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
+                style={iconValueStyle}
               >
                 <i className="bi bi-shield-check fs-2"></i>
               </div>
@@ -146,8 +171,8 @@ export default function About() {
               style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
             >
               <div 
-                className="bg-primary bg-opacity-10 text-info rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
-                style={{ width: 60, height: 60 }}
+                className="rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
+                style={iconValueStyle}
               >
                 <i className="bi bi-lightning-charge-fill fs-2"></i>
               </div>
@@ -164,8 +189,8 @@ export default function About() {
               style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
             >
               <div 
-                className="bg-primary bg-opacity-10 text-info rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
-                style={{ width: 60, height: 60 }}
+                className="rounded-circle mx-auto d-inline-flex align-items-center justify-content-center mb-3" 
+                style={iconValueStyle}
               >
                 <i className="bi bi-people-fill fs-2"></i>
               </div>
@@ -181,7 +206,14 @@ export default function About() {
       {/* SECCIÓN EQUIPO / ROLES */}
       <section className="py-5 my-3">
         <div className="text-center mb-5">
-          <span className="badge rounded-pill border border-secondary border-opacity-50 px-3 py-2 text-info bg-dark bg-opacity-75 mb-3">
+          <span 
+            className="badge rounded-pill px-3 py-2 mb-3 shadow-sm d-inline-flex align-items-center gap-1"
+            style={{
+              background: 'rgba(37, 99, 235, 0.1)',
+              border: '1px solid rgba(124, 58, 237, 0.35)',
+              color: '#38bdf8'
+            }}
+          >
             Talento Humano
           </span>
           <h2 className="fw-bold text-white">Equipo & Liderazgo Corporativo</h2>
@@ -195,12 +227,12 @@ export default function About() {
                 className="p-4 rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column"
                 style={{ background: 'rgba(15, 23, 42, 0.75)', backdropFilter: 'blur(10px)' }}
               >
-                {/* Bloque Visual Iniciales (Altura fija y sin encogerse) */}
+                {/* Bloque Visual Iniciales con degradado alineado */}
                 <div 
                   className="rounded-4 mb-4 d-flex align-items-center justify-content-center position-relative overflow-hidden flex-shrink-0"
                   style={{
                     height: '210px',
-                    background: 'radial-gradient(circle at 50% 35%, rgba(59, 130, 246, 0.28) 0%, rgba(124, 58, 237, 0.15) 50%, rgba(10, 15, 26, 0.95) 85%)',
+                    background: 'radial-gradient(circle at 50% 35%, rgba(0, 229, 255, 0.22) 0%, rgba(157, 78, 221, 0.18) 50%, rgba(10, 15, 26, 0.95) 85%)',
                     border: '1px solid rgba(255, 255, 255, 0.08)'
                   }}
                 >
@@ -212,11 +244,11 @@ export default function About() {
                   </span>
                 </div>
 
-                {/* Categoría: Altura mínima reservada para hasta 2 líneas */}
+                {/* Categoría */}
                 <small 
                   className="text-uppercase fw-bold d-flex align-items-end mb-1"
                   style={{ 
-                    color: '#60a5fa', 
+                    color: '#38bdf8', 
                     fontSize: '0.75rem', 
                     letterSpacing: '0.06em',
                     minHeight: '2.5rem',
@@ -226,7 +258,7 @@ export default function About() {
                   {member.roleCategory}
                 </small>
 
-                {/* Nombre completo: Altura mínima uniforme */}
+                {/* Nombre completo */}
                 <h4 
                   className="fw-bold text-white text-uppercase d-flex align-items-center mb-1"
                   style={{ 
@@ -239,15 +271,19 @@ export default function About() {
                   {member.fullName}
                 </h4>
 
-                {/* Cargo/Puesto: Espacio reservado para 2 líneas */}
+                {/* Cargo/Puesto */}
                 <p 
-                  className="fw-semibold small text-info text-opacity-75 mb-2 d-flex align-items-start"
-                  style={{ minHeight: '2.5rem', lineHeight: '1.25' }}
+                  className="fw-semibold small mb-2 d-flex align-items-start"
+                  style={{ 
+                    minHeight: '2.5rem', 
+                    lineHeight: '1.25',
+                    color: 'rgba(56, 189, 248, 0.85)'
+                  }}
                 >
                   {member.position}
                 </p>
 
-                {/* Descripción: Se expande ocupando el resto de la tarjeta */}
+                {/* Descripción */}
                 <p className="text-secondary small mb-0 flex-grow-1">
                   {member.description}
                 </p>

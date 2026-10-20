@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
 
 export default function Home() {
+  const gradientBtnStyle = {
+    background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)',
+    color: '#ffffff',
+    border: 'none',
+    boxShadow: '0 4px 18px rgba(124, 58, 237, 0.35)',
+    transition: 'all 0.25s ease'
+  };
+
   return (
     <div className="bg-dark text-white min-vh-100 position-relative overflow-hidden" style={{ backgroundColor: '#090d16' }}>
       
@@ -20,13 +28,19 @@ export default function Home() {
         
         {/* HERO SECTION */}
         <section className="text-center mx-auto pt-5 pb-4" style={{ maxWidth: 880 }}>
-          <div className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill border border-secondary border-opacity-50 bg-dark bg-opacity-75 mb-4 shadow-sm">
-            <span className="spinner-grow spinner-grow-sm text-primary" role="status" style={{ width: 8, height: 8 }}></span>
+          <div 
+            className="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill mb-4 shadow-sm"
+            style={{
+              background: 'rgba(37, 99, 235, 0.1)',
+              border: '1px solid rgba(124, 58, 237, 0.35)'
+            }}
+          >
+            <span className="spinner-grow spinner-grow-sm" role="status" style={{ width: 8, height: 8, color: '#60a5fa' }}></span>
             <span className="small text-white-50">Ingeniería & Infraestructura Digital</span>
           </div>
 
           <h1 className="display-3 fw-extrabold tracking-tight mb-4 text-white" style={{ letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-            Construimos el software y la infraestructura que <span className="text-transparent bg-clip-text" style={{ background: 'linear-gradient(135deg, #60a5fa 0%, #a855f7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>hacen escalar tu negocio</span>.
+            Construimos el software y la infraestructura que <span className="text-transparent bg-clip-text" style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>hacen escalar tu negocio</span>.
           </h1>
 
           <p className="lead text-secondary mb-5 mx-auto" style={{ maxWidth: 650 }}>
@@ -34,19 +48,30 @@ export default function Home() {
           </p>
 
           <div className="d-flex flex-column flex-sm-row justify-content-center gap-3 mb-5">
-            <Link to="/contacts" className="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-semibold shadow-lg">
+            <Link 
+              to="/contacts" 
+              className="btn btn-lg rounded-pill px-5 py-3 fw-semibold shadow-lg"
+              style={gradientBtnStyle}
+            >
               Iniciar Proyecto <i className="bi bi-arrow-right ms-2"></i>
             </Link>
-            <Link to="/services" className="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold border-secondary border-opacity-50">
+            <Link 
+              to="/services" 
+              className="btn btn-outline-light btn-lg rounded-pill px-4 py-3 fw-semibold border-secondary border-opacity-50"
+              style={{
+                backdropFilter: 'blur(8px)',
+                borderColor: 'rgba(124, 58, 237, 0.35)'
+              }}
+            >
               Explorar Servicios
             </Link>
           </div>
 
           {/* BADGES EN LÍNEA */}
           <div className="d-flex flex-wrap justify-content-center gap-4 text-secondary small">
-            <span><i className="bi bi-shield-check text-info me-2"></i>Clean Architecture</span>
-            <span><i className="bi bi-cpu text-info me-2"></i>Docker & Cloud Native</span>
-            <span><i className="bi bi-database text-info me-2"></i>SQL Server Optimizado</span>
+            <span><i className="bi bi-shield-check me-2" style={{ color: '#60a5fa' }}></i>Clean Architecture</span>
+            <span><i className="bi bi-cpu me-2" style={{ color: '#60a5fa' }}></i>Docker & Cloud Native</span>
+            <span><i className="bi bi-database me-2" style={{ color: '#60a5fa' }}></i>SQL Server Optimizado</span>
           </div>
         </section>
 
@@ -59,11 +84,14 @@ export default function Home() {
 
           <div className="row g-4">
             
-            {/* Bento Card 1: Grande (2 columnas en escritorio) */}
+            {/* Bento Card 1 */}
             <div className="col-lg-8">
               <div className="p-4 p-md-5 rounded-4 h-100 border border-secondary border-opacity-25" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
                 <div className="d-flex align-items-center gap-3 mb-3">
-                  <div className="bg-primary bg-opacity-10 text-primary rounded-3 p-3">
+                  <div 
+                    className="rounded-3 p-3"
+                    style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#60a5fa' }}
+                  >
                     <i className="bi bi-code-square fs-3"></i>
                   </div>
                   <div>
@@ -85,7 +113,10 @@ export default function Home() {
             {/* Bento Card 2 */}
             <div className="col-lg-4">
               <div className="p-4 p-md-5 rounded-4 h-100 border border-secondary border-opacity-25" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
-                <div className="bg-primary bg-opacity-10 text-info rounded-3 p-3 d-inline-block mb-3">
+                <div 
+                  className="rounded-3 p-3 d-inline-block mb-3"
+                  style={{ background: 'rgba(37, 99, 235, 0.15)', color: '#60a5fa' }}
+                >
                   <i className="bi bi-box-seam fs-3"></i>
                 </div>
                 <h5 className="fw-bold text-white mb-2">Infraestructura & Docker</h5>
@@ -98,7 +129,10 @@ export default function Home() {
             {/* Bento Card 3 */}
             <div className="col-lg-4">
               <div className="p-4 p-md-5 rounded-4 h-100 border border-secondary border-opacity-25" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
-                <div className="bg-primary bg-opacity-10 text-warning rounded-3 p-3 d-inline-block mb-3">
+                <div 
+                  className="rounded-3 p-3 d-inline-block mb-3"
+                  style={{ background: 'rgba(124, 58, 237, 0.15)', color: '#c084fc' }}
+                >
                   <i className="bi bi-database-check fs-3"></i>
                 </div>
                 <h5 className="fw-bold text-white mb-2">Bases de Datos SQL</h5>
@@ -113,7 +147,9 @@ export default function Home() {
               <div className="p-4 p-md-5 rounded-4 h-100 border border-secondary border-opacity-25 d-flex flex-column justify-content-between" style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}>
                 <div>
                   <div className="d-flex justify-content-between align-items-center mb-3">
-                    <span className="text-uppercase fw-bold text-info small"><i className="bi bi-speedometer2 me-1"></i> Performance Metric</span>
+                    <span className="text-uppercase fw-bold small" style={{ color: '#60a5fa' }}>
+                      <i className="bi bi-speedometer2 me-1"></i> Performance Metric
+                    </span>
                     <span className="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25">99.98% Uptime</span>
                   </div>
                   <h4 className="fw-bold text-white mb-2">Monitoreo & Consultoría Continua</h4>
@@ -133,7 +169,11 @@ export default function Home() {
           <p className="text-secondary mb-4 mx-auto" style={{ maxWidth: 550 }}>
             Agenda una sesión inicial de diagnóstico técnico sin costo para tu empresa.
           </p>
-          <Link to="/contacts" className="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg">
+          <Link 
+            to="/contacts" 
+            className="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg"
+            style={gradientBtnStyle}
+          >
             Hablar con un Ingeniero
           </Link>
         </section>

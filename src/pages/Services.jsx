@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
 
 export default function Services() {
+  const brandGradient = 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)';
+  
+  const gradientBtnStyle = {
+    background: brandGradient,
+    color: '#ffffff',
+    border: 'none',
+    boxShadow: '0 4px 18px rgba(124, 58, 237, 0.35)',
+    transition: 'all 0.25s ease'
+  };
+
   const serviceCategories = [
     {
       icon: 'bi-window-stack',
@@ -28,7 +38,7 @@ export default function Services() {
     },
     {
       icon: 'bi-hdd-network',
-      color: '#34d399',
+      color: '#38bdf8',
       title: 'Administración de Servidores & Cloud',
       description: 'Configuración, virtualización y despliegue de entornos de producción de alta disponibilidad en servidores locales y en la nube.',
       capabilities: [
@@ -40,7 +50,7 @@ export default function Services() {
     },
     {
       icon: 'bi-shield-check',
-      color: '#f87171',
+      color: '#a855f7',
       title: 'Seguridad IT & Blindaje Perimetral',
       description: 'Auditoría de vulnerabilidades, configuración de firewalls, políticas de copias de seguridad redundantes y endurecimiento de sistemas frente a incidentes.',
       capabilities: [
@@ -52,7 +62,7 @@ export default function Services() {
     },
     {
       icon: 'bi-motherboard',
-      color: '#fbbf24',
+      color: '#60a5fa',
       title: 'Infraestructura, Hardware & Redes',
       description: 'Diagnóstico técnico, mantenimiento preventivo de hardware crítico, montaje de servidores y configuración de redes locales y de acceso remoto.',
       capabilities: [
@@ -103,7 +113,14 @@ export default function Services() {
     <div className="container py-5">
       {/* ENCABEZADO DE PÁGINA */}
       <section className="text-center mx-auto mb-5" style={{ maxWidth: 820 }}>
-        <span className="badge rounded-pill border border-secondary border-opacity-50 px-3 py-2 text-info bg-dark bg-opacity-75 mb-3">
+        <span 
+          className="badge rounded-pill px-3 py-2 mb-3 shadow-sm d-inline-flex align-items-center gap-1"
+          style={{
+            background: 'rgba(37, 99, 235, 0.1)',
+            border: '1px solid rgba(124, 58, 237, 0.35)',
+            color: '#38bdf8'
+          }}
+        >
           <i className="bi bi-gear-wide-connected me-1"></i> Soluciones Integrales
         </span>
         <h1 className="display-5 fw-bold text-white lh-sm mb-3">
@@ -114,7 +131,7 @@ export default function Services() {
         </p>
       </section>
 
-      {/* GRILLA DE SERVICIOS (6 CARDS EN BENTO GRID DARK) */}
+      {/* GRILLA DE SERVICIOS */}
       <section className="row g-4 mb-5">
         {serviceCategories.map((service, index) => (
           <div key={index} className="col-md-6 col-lg-4">
@@ -123,15 +140,16 @@ export default function Services() {
               style={{ background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(12px)' }}
             >
               <div>
-                {/* Icono con Glow */}
+                {/* Icono con Contenedor Acorde a la Marca */}
                 <div 
                   className="rounded-3 d-inline-flex align-items-center justify-content-center mb-4"
                   style={{
                     width: 56,
                     height: 56,
-                    backgroundColor: 'rgba(255, 255, 255, 0.04)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    color: service.color
+                    backgroundColor: 'rgba(37, 99, 235, 0.12)',
+                    border: '1px solid rgba(124, 58, 237, 0.25)',
+                    color: service.color,
+                    boxShadow: '0 0 16px rgba(37, 99, 235, 0.15)'
                   }}
                 >
                   <i className={`bi ${service.icon} fs-3`}></i>
@@ -146,11 +164,11 @@ export default function Services() {
                 </p>
               </div>
 
-              {/* Lista de Capacidades */}
+              {/* Lista de Capacidades con Iconos Cian */}
               <ul className="list-unstyled text-secondary small mt-auto mb-0 pt-3 border-top border-secondary border-opacity-25">
                 {service.capabilities.map((item, idx) => (
                   <li key={idx} className="mb-2 d-flex align-items-start">
-                    <i className="bi bi-check2-circle text-info me-2 mt-1"></i>
+                    <i className="bi bi-check2-circle me-2 mt-1" style={{ color: '#38bdf8' }}></i>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -166,7 +184,10 @@ export default function Services() {
         style={{ background: 'rgba(15, 23, 42, 0.45)', backdropFilter: 'blur(10px)' }}
       >
         <div className="text-center mb-5">
-          <span className="text-uppercase fw-bold text-info small letter-spacing-1 d-block mb-1">
+          <span 
+            className="text-uppercase fw-bold small letter-spacing-1 d-block mb-1"
+            style={{ color: '#38bdf8' }}
+          >
             Garantía Operativa
           </span>
           <h2 className="fw-bold text-white">Nuestro Ciclo Metodológico</h2>
@@ -181,7 +202,10 @@ export default function Services() {
               <div className="p-2">
                 <span 
                   className="badge rounded-circle p-3 mb-3 fs-5 shadow-sm"
-                  style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)' }}
+                  style={{ 
+                    background: brandGradient,
+                    boxShadow: '0 4px 14px rgba(124, 58, 237, 0.4)'
+                  }}
                 >
                   {m.step}
                 </span>
@@ -204,8 +228,8 @@ export default function Services() {
         </p>
         <Link 
           to="/contacts" 
-          className="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold text-white border-0 shadow-lg"
-          style={{ background: 'linear-gradient(135deg, #2563eb 0%, #7c3aed 100%)' }}
+          className="btn btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg"
+          style={gradientBtnStyle}
         >
           Contactar con un Especialista <i className="bi bi-arrow-right ms-2"></i>
         </Link>
