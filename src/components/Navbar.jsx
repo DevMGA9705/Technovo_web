@@ -39,7 +39,7 @@ export default function Navbar() {
                 src="/logoplexia2.png"
                 alt="PLEXIA INGENIERÍA"
                 style={{
-                  height: '90px',            // Reducimos un poco de 110px a 90px para un ajuste perfecto sin desbordarse
+                  height: '120px',            // Reducimos un poco de 110px a 90px para un ajuste perfecto sin desbordarse
                   width: 'auto',
                   objectFit: 'contain',
                   transform: 'scale(1.35)',   // Un zoom de 1.35x para mantenerlo grande pero seguro dentro de la caja
